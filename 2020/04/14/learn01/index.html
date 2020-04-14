@@ -5,18 +5,17 @@
   
 
   
-  <title>首篇展示 | 正好博客</title>
+  <title>learn01 | 正好博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是第一份模板发布测试。">
+  <meta name="description" content="TypeScript里的类只是JavaScript里常用的基于原型面向对象编程的简写。 TypeScript支持JavaScript的新特性，比如支持基于类的面向对象编程。 在TypeScript里，只要两个类型内部的结构兼容那么这两个类型就是兼容的。 这就允许我们在实现接口时候只要保证包含了接口要求的结构就可以，而不必明确地使用 implements语句。 让我们创建一个Student类，它带有">
 <meta property="og:type" content="article">
-<meta property="og:title" content="首篇展示">
-<meta property="og:url" content="http://yoursite.com/2020/04/13/oneblog/index.html">
+<meta property="og:title" content="learn01">
+<meta property="og:url" content="http://yoursite.com/2020/04/14/learn01/index.html">
 <meta property="og:site_name" content="正好博客">
-<meta property="og:description" content="这是第一份模板发布测试。">
-<meta property="article:published_time" content="2020-04-13T04:12:00.000Z">
-<meta property="article:modified_time" content="2020-04-13T04:28:19.120Z">
+<meta property="og:description" content="TypeScript里的类只是JavaScript里常用的基于原型面向对象编程的简写。 TypeScript支持JavaScript的新特性，比如支持基于类的面向对象编程。 在TypeScript里，只要两个类型内部的结构兼容那么这两个类型就是兼容的。 这就允许我们在实现接口时候只要保证包含了接口要求的结构就可以，而不必明确地使用 implements语句。 让我们创建一个Student类，它带有">
+<meta property="article:published_time" content="2020-04-14T05:30:39.962Z">
+<meta property="article:modified_time" content="2020-04-14T05:30:39.962Z">
 <meta property="article:author" content="hao">
-<meta property="article:tag" content="post">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="正好博客" type="application/atom+xml">
@@ -66,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-oneblog" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-learn01" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/04/13/oneblog/" class="article-date">
-  <time datetime="2020-04-13T04:12:00.000Z" itemprop="datePublished">2020-04-13</time>
+    <a href="/2020/04/14/learn01/" class="article-date">
+  <time datetime="2020-04-14T05:30:39.962Z" itemprop="datePublished">2020-04-14</time>
 </a>
     
   </div>
@@ -80,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      首篇展示
+      learn01
     </h1>
   
 
@@ -88,35 +87,53 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这是第一份模板发布测试。</p>
+        <p>TypeScript里的类只是JavaScript里常用的基于原型面向对象编程的简写。</p>
+<p>TypeScript支持JavaScript的新特性，比如支持基于类的面向对象编程。</p>
+<p>在TypeScript里，只要两个类型内部的结构兼容那么这两个类型就是兼容的。</p>
+<p>这就允许我们在实现接口时候只要保证包含了接口要求的结构就可以，而不必明确地使用 implements语句。</p>
+<p>让我们创建一个Student类，它带有一个构造函数和一些公共字段。</p>
+<p>注意类和接口可以一起共作，程序员可以自行决定抽象的级别。</p>
+<p>还要注意的是，在构造函数的参数上使用public等同于创建了同名的成员变量。</p>
+<hr>
+<pre><code>class Student {
+fullName: string;
+constructor(public firstName, public middleInitial, public lastName) {
+    this.fullName = firstName + &quot; &quot; + middleInitial + &quot; &quot; + lastName;
+}
+}
+
+interface Person {
+firstName: string;
+lastName: string;
+}
+
+function greeter(person : Person) {
+return &quot;Hello, &quot; + person.firstName + &quot; &quot; + person.lastName;
+}
+
+let user = new Student(&quot;Jane&quot;, &quot;M.&quot;, &quot;User&quot;);
+
+document.body.innerHTML = greeter(user);</code></pre><hr>
+<p>重新运行tsc greeter.ts，</p>
+<p>在命令行上，运行TypeScript编译器：tsc greeter.ts</p>
+<p>你会看到生成的JavaScript代码和原先的一样。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/13/oneblog/" data-id="ck8xyo1js0000thyqdaj389zr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/14/learn01/" data-id="ck8zgwqch000051yqa4fhg2kc" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/post/" rel="tag">post</a></li></ul>
-
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2020/04/14/news01/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          news01
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/04/14/news01/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">news01</div>
     </a>
   
 </nav>

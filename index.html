@@ -65,6 +65,72 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-learn01" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/14/learn01/" class="article-date">
+  <time datetime="2020-04-14T05:30:39.962Z" itemprop="datePublished">2020-04-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/14/learn01/">learn01</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>TypeScript里的类只是JavaScript里常用的基于原型面向对象编程的简写。</p>
+<p>TypeScript支持JavaScript的新特性，比如支持基于类的面向对象编程。</p>
+<p>在TypeScript里，只要两个类型内部的结构兼容那么这两个类型就是兼容的。</p>
+<p>这就允许我们在实现接口时候只要保证包含了接口要求的结构就可以，而不必明确地使用 implements语句。</p>
+<p>让我们创建一个Student类，它带有一个构造函数和一些公共字段。</p>
+<p>注意类和接口可以一起共作，程序员可以自行决定抽象的级别。</p>
+<p>还要注意的是，在构造函数的参数上使用public等同于创建了同名的成员变量。</p>
+<hr>
+<pre><code>class Student {
+fullName: string;
+constructor(public firstName, public middleInitial, public lastName) {
+    this.fullName = firstName + &quot; &quot; + middleInitial + &quot; &quot; + lastName;
+}
+}
+
+interface Person {
+firstName: string;
+lastName: string;
+}
+
+function greeter(person : Person) {
+return &quot;Hello, &quot; + person.firstName + &quot; &quot; + person.lastName;
+}
+
+let user = new Student(&quot;Jane&quot;, &quot;M.&quot;, &quot;User&quot;);
+
+document.body.innerHTML = greeter(user);</code></pre><hr>
+<p>重新运行tsc greeter.ts，</p>
+<p>在命令行上，运行TypeScript编译器：tsc greeter.ts</p>
+<p>你会看到生成的JavaScript代码和原先的一样。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/04/14/learn01/" data-id="ck8zgwqch000051yqa4fhg2kc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-news01" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/04/14/news01/" class="article-date">
@@ -239,6 +305,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/04/14/learn01/">learn01</a>
+          </li>
         
           <li>
             <a href="/2020/04/14/news01/">news01</a>
